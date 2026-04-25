@@ -1,0 +1,10 @@
+<!DOCTYPE html><html><head><title>QRT Login</title><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<link rel="manifest" href="manifest.json"><meta name="theme-color" content="#991b1b">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="QRT">
+<link rel="apple-touch-icon" href="icon-180.png"><link rel="stylesheet" href="style.css"></head><body><div class="app center">
+<img src="icon-180.png" class="logo"><section class="card"><h1 data-t="login">Login</h1><p class="note">Prototype login. Real Google/Apple sign-in needs Firebase Auth or Supabase Auth.</p>
+<label>Role / الصلاحية</label><select id="role"><option value="reporter">Reporter / مبلّغ</option><option value="team">Team / فريق</option><option value="admin">Admin / إدارة</option></select>
+<button class="black" onclick="mockLogin('Google',val('role'))" data-t="google">Continue with Google</button>
+<button class="black" onclick="mockLogin('Apple',val('role'))" data-t="apple">Continue with Apple</button>
+<div class="top-actions" style="margin-top:14px"><button class="small gray" onclick="setLang('ar')">عربي</button><button class="small gray" onclick="setLang('en')">English</button></div>
+</section></div><script src="script.js"></script></body></html>

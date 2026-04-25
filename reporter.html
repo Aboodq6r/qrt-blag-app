@@ -1,0 +1,12 @@
+<!DOCTYPE html><html><head><title>QRT Reporter</title><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<link rel="manifest" href="manifest.json"><meta name="theme-color" content="#991b1b">
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="QRT">
+<link rel="apple-touch-icon" href="icon-180.png"><link rel="stylesheet" href="style.css"></head><body><div class="app"><header><div><h1 data-t="title">Qatar Rescue Team</h1><p data-t="subtitle">Field rescue reporting and dispatch system</p></div><div class="top-actions"><button class="small black" onclick="setLang('ar')">عربي</button><button class="small black" onclick="setLang('en')">English</button><button class="small gray" onclick="logout()" data-t="logout">Logout</button><span class="badge">QRT</span></div></header><nav class="nav"><a href="reporter.html" data-t="reporter">Reporter</a><a href="team.html" data-t="team">Team</a><a href="admin.html" data-t="admin">Admin</a><a href="location.html" data-t="location">Location</a></nav>
+<section class="card"><h2 data-t="report">Submit Report</h2><form id="reportForm">
+<label>Reporter Name / اسم المبلّغ</label><input id="name" required>
+<label>Phone / رقم الهاتف</label><input id="phone" required inputmode="tel">
+<label>Incident Type / نوع البلاغ</label><select id="type" required><option>Lost in desert / تائه في البر</option><option>Stuck vehicle / تغريز سيارة</option><option>Accident / حادث</option><option>Vehicle failure / عطل مركبة</option><option>Medical emergency / حالة صحية طارئة</option><option>Missing person / مفقود</option><option>Fire or nearby danger / حريق أو خطر قريب</option></select>
+<label>Priority / الخطورة</label><select id="priority"><option>Normal / عادي</option><option>Medium / متوسط</option><option>Urgent / عاجل</option><option>Critical / طارئ جداً</option></select>
+<div class="grid"><div><label>People / عدد الأشخاص</label><input id="people" type="number" min="1"></div><div><label>Vehicle / المركبة</label><input id="vehicle"></div></div>
+<label>Details / التفاصيل</label><textarea id="details" required></textarea>
+<button class="primary" type="submit" data-t="report">Submit Report</button></form></section></div><script src="script.js"></script></body></html>
